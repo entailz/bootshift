@@ -23,7 +23,8 @@ Run bootshift just as you would run timeshift, it is simply a wrapper that first
 
 ## Configuration
 
-- There is an example config file in the repo, this is essentially a template entry for your snapshots.
+- You will need to create a directory called bootshift in ~/.config/ and create a file called config.ini inside of bootshift, use example_config.ini as a reference.
+- config.ini is essentially a template entry for your snapshots in ini format.
 - It is important that you replace the partuuid with the partuuid of the partition that contains your timeshift-btrfs snapshot directory.
 
 
