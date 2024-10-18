@@ -12,5 +12,5 @@ if [ $TS_EXIT -eq 0 ]; then
 	echo "Timeshift completed successfully. Running bootshift..."
 	sudo /home/$USER/.local/bin/bootshift_loader.py
 else
-	echo "Timeshift failed or was interrupted. Skipping bootstanzabtrfs."
+	echo "Timeshift failed or was interrupted. Skipping bootshift..."
 fi
