@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+	echo "No arguments provided to Timeshift. Exiting."
+	exit 1
+fi
+
+sudo timeshift "$@"
+TS_EXIT=$?
+
+if [ $TS_EXIT -eq 0 ]; then
+	echo "Timeshift completed successfully. Running bootshift..."
+	sudo /home/$USER/.local/bin/bootshift_loader.py
+else
+	echo "Timeshift failed or was interrupted. Skipping bootstanzabtrfs."
+fi
